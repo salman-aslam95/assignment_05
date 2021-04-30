@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import OurContext from './ourContext';
+import Parent from "./Parent.js";
+import { useState } from "react";
 
 function App() {
+
+  let countState = useState(0); //[count, setCount]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <body>
+      <div className = "App">
+        <OurContext.Provider value={countState}>
+          <div>
+            <Parent />
+          </div>    
+        </OurContext.Provider>
+      </div>
+    </body>
   );
 }
 
