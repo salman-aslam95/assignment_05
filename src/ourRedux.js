@@ -4,6 +4,8 @@ const ourReducer = (state, action) => {
             return state + 1;
         case 'decreament':
             return state - 1;
+        default:
+            break;
     }
 
 }
