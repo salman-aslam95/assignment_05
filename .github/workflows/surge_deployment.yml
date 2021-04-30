@@ -40,7 +40,7 @@ jobs:
       - name: Step 03 creating build.
         uses: Borales/actions-yarn@v2.3.0
         with:
-          cmd: sudo yarn build
+          cmd: yarn build
       
       - name: Step 04 installing surge.
         run: npm install -g surge
